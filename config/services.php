@@ -29,5 +29,9 @@ return [
         'secret' => env('AWS_SECRET_ACCESS_KEY'),
         'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
     ],
+    'saml2' => [
+        'metadata' => env('ENV_SAML2_METADATA_URL'),
+        'entityid' => env('ENV_SAML2_ENTITYID')
+    ]
 
 ];
