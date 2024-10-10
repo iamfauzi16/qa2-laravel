@@ -195,7 +195,7 @@ return [
         */
 
         'assertionConsumerService' => [
-            'url' => 'https://qa2.softwaremaju.com/saml2/acs',
+            'url' => 'https://login.microsoftonline.com/a25e3115-8900-45d8-ab1d-c5d691bd8c2e/saml2',
         ],
 
         /*
