@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 use Laravel\Socialite\Facades\Socialite;
 use Slides\Saml2\Http\Controllers\Saml2Controller;
@@ -19,6 +20,8 @@ Route::get('/', function () {
 });
 
 Auth::routes();
+
+Route::get('/home', [HomeController::class])->name('home');
 Route::get('/saml2/login', [Saml2Controller::class , 'login']);
 
 Route::post('/saml2/acs', [Saml2Controller::class , 'acs']);
