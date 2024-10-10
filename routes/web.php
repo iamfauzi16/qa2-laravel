@@ -21,7 +21,7 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', [HomeController::class])->name('home');
+Route::get('/home', [HomeController::class,'index'])->name('home');
 Route::get('/saml2/login', [Saml2Controller::class , 'login']);
 
 Route::post('/saml2/acs', [Saml2Controller::class , 'acs']);
