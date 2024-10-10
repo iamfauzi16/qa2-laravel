@@ -48,7 +48,7 @@ class EventServiceProvider extends ServiceProvider
             $user = User::where('email', $userData['id'])->first();
             
             // Login a user.
-            Auth::login($user);
+           dd($userData);
         });
     }
 }

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3c7f5331018445bbfd19479762342cda",
+    "content-hash": "de180945cb4e8faf70f10aa222e6e6a0",
     "packages": [
         {
             "name": "24slides/laravel-saml2",
