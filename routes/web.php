@@ -25,3 +25,5 @@ Route::get('/auth/redirect', function () {
 Route::get('/auth/callback', function () {
     $user = Socialite::driver('saml2')->user();
 });
+
+Route::get('saml2/acs');
