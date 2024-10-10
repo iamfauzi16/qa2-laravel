@@ -2,7 +2,6 @@
 
 use Illuminate\Support\Facades\Route;
 use Laravel\Socialite\Facades\Socialite;
-use Slides\Saml2\Auth;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -22,4 +21,4 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::get('/saml2/acs', [Auth::class, 'acs'])->name('saml.acs');
+

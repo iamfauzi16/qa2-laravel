@@ -195,7 +195,7 @@ return [
         */
 
         'assertionConsumerService' => [
-            'url' => '',
+            'url' => 'https://qa2.softwaremaju.com/saml2/login',
         ],
 
         /*
@@ -212,7 +212,7 @@ return [
         */
 
         'singleLogoutService' => [
-            'url' => ''
+            'url' => 'https://qa2.softwaremaju.com/saml2/logout'
         ],
     ],
 
