@@ -19,7 +19,8 @@ Route::get('/', function () {
 });
 
 Auth::routes();
+Route::get('/saml2/login', [Saml2Controller::class , 'login']);
 
-Route::post('/saml2/{uuid}/acs', [Saml2Controller::class , 'acs']);
+Route::post('/saml2/acs', [Saml2Controller::class , 'acs']);
 
 
