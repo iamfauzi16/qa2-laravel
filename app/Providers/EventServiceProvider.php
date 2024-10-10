@@ -2,10 +2,11 @@
 
 namespace App\Providers;
 
+use App\Models\User;
+use Illuminate\Support\Facades\Event;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Auth\Listeners\SendEmailVerificationNotification;
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
-use Illuminate\Support\Facades\Event;
 
 class EventServiceProvider extends ServiceProvider
 {
@@ -27,6 +28,22 @@ class EventServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        Event::listen(\Slides\Saml2\Events\SignedIn::class, function (\Slides\Saml2\Events\SignedIn $event) {
+            $messageId = $event->getAuth()->getLastMessageId();
+            
+            // your own code preventing reuse of a $messageId to stop replay attacks
+            $samlUser = $event->getSaml2User();
+            
+            $userData = [
+                'id' => $samlUser->getUserId(),
+                'attributes' => $samlUser->getAttributes(),
+                'assertion' => $samlUser->getRawSamlAssertion()
+            ];
+            
+            $user = User::first();
+            
+            // Login a user.
+            Auth::login($user);
+        });
     }
 }
