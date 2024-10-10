@@ -12,7 +12,11 @@
         "laravel/framework": "^8.75",
         "laravel/sanctum": "^2.11",
         "laravel/tinker": "^2.5",
+<<<<<<< HEAD
         "laravel/ui": "^3.4"
+=======
+        "socialiteproviders/saml2": "^4.7"
+>>>>>>> 2f27f248491efd74dc0cec98e3d5da417db188ab
     },
     "require-dev": {
         "facade/ignition": "^2.5",
