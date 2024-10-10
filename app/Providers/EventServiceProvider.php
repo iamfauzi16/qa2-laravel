@@ -45,7 +45,7 @@ class EventServiceProvider extends ServiceProvider
                 'assertion' => $samlUser->getRawSamlAssertion()
             ];
             
-            $user = User::first();
+            $user = User::where('email', $userData['id'])->first();
             
             // Login a user.
             Auth::login($user);
